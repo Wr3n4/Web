@@ -2,9 +2,14 @@
 * {
     scroll-behavior: smooth;
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Poppins", Regular 400;
     padding: 0;
     box-sizing: border-box;
+}
+
+*::selection{
+    background-color: white;
+    color: black;
 }
 
 header {
@@ -61,6 +66,19 @@ ul, ol {
     background-color: bisque;
     border-left: 5px solid coral;
 }
+
+ul li > span{
+    font-weight: bold;
+}
+
+ol li + li{
+    font-style: italic;
+}
+
+ol li:last-child{
+    font-size: 30px;
+}
+
 
 li { 
     margin-bottom: 5px;
