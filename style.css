@@ -1,6 +1,8 @@
 
 * {
+    scroll-behavior: smooth;
     margin: 0;
+    font-family: Arial, sans-serif;
     padding: 0;
     box-sizing: border-box;
 }
@@ -9,19 +11,29 @@ header {
     background-color:coral;
     color: white;
     border-radius: 15px;
-    font-family: Arial, sans-serif;
     text-align: center;
     font-size: 18px;
     padding: 20px;
 }
 
 body {
-    font-family: Arial, sans-serif;
     font-size: 20px;
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
     padding: 20px;
+}
+
+.tools{
+    background-color: bisque;
+    font-size: 20px;
+    border-radius: 15px;
+    padding: 10px 20px;
+    margin: 20px auto;
+    display: inline-block;
+    color: coral;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 h2 {
