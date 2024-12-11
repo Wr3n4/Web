@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Регистрация</title>
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">На главную</a></h1>
+    </header>
+    <main>
+        <h2>Регистрация нового пользователя</h2>
+        <form action="#" method="POST">
+            <fieldset>
+                <legend>Личная информация</legend>
+                <label for="name">Имя: </label>
+                <input type="text" id="name" name="name" placeholder="Иван" required>
+                <label for="birthdate">Дата рождения: </label>
+                <input type="date" id="birthdate" name="birthdate">
+                <label>Пол: </label>
+                <div class="gender-option">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Мужской</label>
+                </div>
+        
+                <div class="gender-option">
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Женский</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Контактные данные</legend>
+                <label for="email">Email: </label>
+                <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+                <label for="phone">Телефон: </label>
+                <input type="tel" id="phone" name="phone" placeholder="+X (XXX) XXX-XX-XX">
+                <label for="contact-time">Удобное время для связи:</label>
+                <select id="contact-time" name="contact-time">
+                    <option value="morning">Утро (с 8:00 до 12:00)</option>
+                    <option value="day">День (с 12:00 до 16:00)</option>
+                    <option value="evening">Вечер (с 16:00 до 20:00)</option>
+                    <option value="night">Ночь (с 20:00 до 00:00)</option>
+                </select>
+            </fieldset>
+            <button type="submit">Регистрация</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 WЯENCHY's inc. Все права защищены.</p>
+    </footer>
+</body>
+</html>

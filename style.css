@@ -1,107 +1,285 @@
+/* Общие стили */
 * {
-    line-height: 1.5;
-    scroll-behavior: smooth;
     margin: 0;
-    font-family: "Poppins", sans-serif;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
 }
 
 *::selection {
-    background-color: #ffd7c1;
-    color: #333;
-}
-
-header {
     background-color: coral;
     color: white;
-    border-radius: 15px;
-    text-align: center;
-    font-size: 24px;
-    font-weight: 600;
-    padding: 20px;
-    max-width: 80%;
-    margin: 20px auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Body */
 body {
-    font-size: 18px;
-    line-height: 1.8;
-    background-color: #fefaf5;
+    background: linear-gradient(120deg, #fffaf0, #ffe4c4);
     color: #333;
-    padding: 20px;
-    width: 100%;
+    font-size: 1rem;
+    line-height: 1.8;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     min-height: 100vh;
 }
 
-.tools, h2 {
-    background-color: #ffe4c4;
-    border-radius: 15px;
-    color: coral;
+/* Header */
+header {
+    background: linear-gradient(135deg, #ff7f50, #ff6f61);
+    color: white;
+    border-radius: 1rem;
+    padding: 0.75rem 1rem;
     text-align: center;
-    margin: 20px auto;
-    padding: 15px 25px;
-    max-width: 60%;
-    font-size: 20px;
-    font-weight: 500;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-p {
-    margin: 15px auto;
-    max-width: 70%;
-    text-align: justify;
-    line-height: 1.8;
-}
-
-ul, ol {
-    margin: 20px auto;
-    padding: 15px 25px;
-    color: #333;
-    font-family: Arial, sans-serif;
-    background-color: #ffe4c4;
-    border-left: 5px solid coral;
-    max-width: 70%;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-ul li > span {
+    font-size: 1.5rem;
     font-weight: bold;
+    max-width: 80%;
+    margin: 1rem auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease;
 }
 
-ol li + li {
-    font-style: italic;
+header:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
-ol li:last-child {
-    font-size: 24px;
-    font-weight: 700;
-    color: coral;
+header h1 a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
-li {
-    margin-bottom: 10px;
+header h1 a:hover {
+    color: #ff7f50;
 }
 
-img {
-    display: block;
-    margin: 30px auto;
-    border: 3px solid coral;
-    border-radius: 20px;
-    max-width: 90%;
-    height: auto;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
+/* Ссылки */
 a {
-    color: coral;
+    color: #ff7f50;
     font-weight: bold;
     text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
 }
 
 a:hover {
-    color: #ff7f50;
+    color: #ff4f30;
+    transform: scale(1.1);
     text-decoration: underline;
+}
+
+/* Перейти к форме регистрации */
+a[href="form.html"] {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 1rem 2rem;
+    background-color: #ff7f50;
+    color: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+a[href="form.html"]:hover {
+    background-color: #ff4f30;
+    transform: translateY(-5px);
+}
+
+/* Main */
+main {
+    max-width: 800px;
+    width: 100%;
+    margin: 2rem auto;
+}
+
+h2 {
+    background: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    max-width: 90%;
+    margin: 1.5rem auto;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    transition: transform 0.3s ease;
+}
+
+h2::selection {
+    background-color: white;
+    color: coral;
+}
+
+/* Инструменты */
+.tools-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin: 2rem auto;
+    max-width: 90%;
+}
+
+.tool-card {
+    background: #fff;
+    color: #333;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.tool-card h3 {
+    color: #ff7f50;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* Пример кода */
+.code-example {
+    background-color: #f4f4f4;
+    padding: 1.5rem;
+    margin: 2rem auto;
+    max-width: 90%;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Список с ссылками */
+ol {
+    margin: 1.5rem auto;
+    padding: 1rem 1.5rem;
+    color: #555;
+    font-family: "Arial", sans-serif;
+    background: #fff;
+    border: 2px solid #ffe4c4;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    list-style: none;
+}
+
+li {
+    padding: 0.75rem 1rem;
+    background: #fffaf0;
+    border-radius: 0.5rem;
+    position: relative;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Форма */
+form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 1.5rem;
+}
+
+legend {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #ff7f50;
+}
+
+input[type="radio"] {
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+button {
+    background-color: #ff7f50;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff4f30;
+    transform: translateY(-5px);
+}
+
+/* Стилизация радиокнопок с текстом */
+.gender-option {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 2rem; /* Добавим промежуток между опциями */
+}
+
+input[type="radio"] {
+    margin-right: 0.5rem; /* Расстояние между радиокнопкой и текстом */
+}
+
+label {
+    font-size: 1rem;
+    color: #333;
+}
+
+a:visited {
+    text-decoration: line-through;
 }
