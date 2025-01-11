@@ -1,0 +1,153 @@
+/* General Reset */
+* {
+    line-height: 1.5;
+    scroll-behavior: smooth;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::selection {
+    background-color: #ffd7c1;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background-color: hsl(16, 100%, 50%); /* Coral color using HSL */
+    color: #fff; /* White using HEX */
+    border-radius: 15px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 1.25rem;
+    max-width: 80%;
+    margin: 1.25rem auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center; /* Center align text */
+    align-items: center;
+}
+
+/* Body Styles */
+body {
+    font-size: 1rem; /* 16px relative unit */
+    line-height: 1.8;
+    background-color: rgb(254, 250, 245); /* Background using RGB */
+    color: #333;
+    padding: 1.25rem;
+    width: 100%;
+    min-height: 100vh;
+    display: flex; /* Flex container for the body */
+    flex-direction: column; /* Align items vertically */
+    align-items: center;
+}
+
+/* Tools and Headings */
+.tools, h2 {
+    background-color: var(--tool-bg, #ffe4c4); /* CSS Variable for background */
+    border-radius: 15px;
+    color: coral;
+    text-align: center;
+    margin: 1.25rem auto;
+    padding: 0.9375rem 1.5625rem; /* Relative padding */
+    max-width: 60%;
+    font-size: 1.25rem;
+    font-weight: 500;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Paragraphs */
+p {
+    margin: 0.9375rem auto;
+    max-width: 70%;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+/* Lists */
+ul, ol {
+    margin: 1.25rem auto;
+    padding: 0.9375rem 1.5625rem;
+    color: coral;
+    font-family: Arial, sans-serif;
+    background-color: #ffe4c4;
+    border-left: 5px solid coral;
+    max-width: 70%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Vertical arrangement */
+    gap: 10px; /* Space between items */
+}
+
+ul li > span {
+    font-weight: bold;
+}
+
+ol li + li {
+    font-style: italic;
+}
+
+ol li:last-child {
+    font-size: 1.5rem; /* Larger last item */
+    font-weight: 700;
+    color: coral;
+}
+
+li {
+    margin-bottom: 0.625rem;
+}
+
+/* Images */
+img {
+    display: block;
+    margin: 1.875rem auto;
+    border: 3px solid coral;
+    border-radius: 20px;
+    max-width: 90%;
+    height: auto;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Links */
+a {
+    color: coral;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(255, 127, 80); /* Using RGB */
+    text-decoration: underline;
+}
+
+/* Flexbox Container for Specific Layout */
+.flex-container {
+    display: flex;
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Align items vertically */
+    gap: 1rem; /* Space between flex items */
+    padding: 1rem;
+    max-width: 80%;
+    margin: auto;
+    background-color: #ffe4c4; /* Beige background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Flex Items */
+.flex-item {
+    flex: 1; /* Equal distribution of space */
+    margin: 0.5rem;
+    text-align: center;
+    background-color: coral;
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

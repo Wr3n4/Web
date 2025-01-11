@@ -1,4 +1,3 @@
-/* Общие стили */
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +11,6 @@
     color: white;
 }
 
-/* Body */
 body {
     background: linear-gradient(120deg, #fffaf0, #ffe4c4);
     color: #333;
@@ -25,7 +23,6 @@ body {
     min-height: 100vh;
 }
 
-/* Header */
 header {
     background: linear-gradient(135deg, #ff7f50, #ff6f61);
     color: white;
@@ -42,7 +39,6 @@ header {
 }
 
 header:hover {
-    transform: translateY(-5px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
@@ -57,7 +53,15 @@ header h1 a:hover {
     color: #ff7f50;
 }
 
-/* Ссылки */
+@keyframes scaleUp {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+
 a {
     color: #ff7f50;
     font-weight: bold;
@@ -67,11 +71,10 @@ a {
 
 a:hover {
     color: #ff4f30;
-    transform: scale(1.1);
     text-decoration: underline;
+    animation: scaleUp 0.3s ease-in-out forwards;
 }
 
-/* Перейти к форме регистрации */
 a[href="form.html"] {
     display: inline-block;
     margin-top: 1.5rem;
@@ -87,10 +90,8 @@ a[href="form.html"] {
 
 a[href="form.html"]:hover {
     background-color: #ff4f30;
-    transform: translateY(-5px);
 }
 
-/* Main */
 main {
     max-width: 800px;
     width: 100%;
@@ -116,7 +117,21 @@ h2::selection {
     color: coral;
 }
 
-/* Инструменты */
+img {
+    display: block;
+    margin: 2rem auto;
+    max-width: 70%;
+    border: 1.5px solid #ff7f50;
+    border-radius: 1rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
 .tools-container {
     display: flex;
     justify-content: space-between;
@@ -126,6 +141,8 @@ h2::selection {
 }
 
 .tool-card {
+    flex-grow: 1;
+    flex-shrink: 0;
     background: #fff;
     color: #333;
     padding: 1rem;
@@ -136,7 +153,7 @@ h2::selection {
 }
 
 .tool-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px);    
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
@@ -146,7 +163,6 @@ h2::selection {
     font-weight: 600;
 }
 
-/* Пример кода */
 .code-example {
     background-color: #f4f4f4;
     padding: 1.5rem;
@@ -163,7 +179,6 @@ code {
     color: #333;
 }
 
-/* Список с ссылками */
 ol {
     margin: 1.5rem auto;
     padding: 1rem 1.5rem;
@@ -183,7 +198,6 @@ li {
     position: relative;
 }
 
-/* Footer */
 footer {
     background: #333;
     color: white;
@@ -203,7 +217,6 @@ footer p {
     font-size: 1rem;
 }
 
-/* Форма */
 form {
     background-color: white;
     padding: 2rem;
@@ -264,22 +277,88 @@ button:hover {
     transform: translateY(-5px);
 }
 
-/* Стилизация радиокнопок с текстом */
 .gender-option {
     display: inline-flex;
     align-items: center;
-    margin-right: 2rem; /* Добавим промежуток между опциями */
+    margin-right: 2rem;
 }
 
 input[type="radio"] {
-    margin-right: 0.5rem; /* Расстояние между радиокнопкой и текстом */
-}
-
-label {
-    font-size: 1rem;
-    color: #333;
+    margin-right: 0.5rem;
 }
 
 a:visited {
     text-decoration: line-through;
+}
+
+.gradient-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 300px;
+    margin: 1rem;
+    border-radius: 1rem;
+    color: white;
+    font-weight: bold;
+}
+
+.linear-gradient {
+    background: linear-gradient(45deg, #ff7f50, #ff6f61);
+}
+
+.radial-gradient {
+    background: radial-gradient(circle, #ff7f50, #ff6f61);
+}
+
+.conic-gradient {
+    background: conic-gradient(from 0deg, #ff7f50, #ff6f61, #ff7f50);
+}
+
+.box {
+    background-color: #ff7f50;
+    color: white;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    border-radius: 1rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.rotate {
+    transform: rotate(45deg);
+}
+
+.scale {
+    transform: scale(1.5);
+}
+
+.rotate-3d {
+    transform: perspective(500px) rotateY(45deg);
+}
+
+.rotate-x {
+    transform: perspective(500px) rotateX(45deg);
+}
+
+.transition-bg {
+    background-color: #ff7f50;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.transition-bg:hover {
+    background-color: #ff6f61;
+}
+
+.transition-scale {
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.transition-scale:hover {
+    transform: scale(1.2);
 }

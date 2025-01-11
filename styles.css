@@ -1,0 +1,70 @@
+/* Общие стили для всей страницы */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 150px);
+    gap: 20px;
+    width: 80%;
+    max-width: 1200px;
+    margin: 20px;
+}
+
+.grid-item {
+    background-color: #ff7f50;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.grid-item:hover {
+    transform: scale(1.1);
+}
+
+.item1 {
+    grid-column: span 2;
+}
+
+.item2 {
+    grid-row: span 2;
+}
+
+.item3 {
+    grid-column: span 1;
+}
+
+.item4 {
+    grid-column: span 1;
+}
+
+.item5 {
+    grid-column: span 1;
+}
+
+.item6 {
+    grid-column: span 1;
+}
+
+.item7 {
+    grid-column: span 1;
+}
+
+.item8 {
+    grid-column: span 1;
+}
